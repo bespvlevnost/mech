@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none; /*chrome*/
+  }
+
+  /* header */
+.header{
+    width: 100%;
+    padding: 12px 24px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);   
+    position: fixed;
+    border-bottom: 2px solid black;
+    top: 0;
+    z-index: 1;
+    width: 100%
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+
+.headerLogo{
+    height: 75px;
+    width: 75px;
+}
+
+.logoContainer{
+    display: flex;
+    width: 20%;
+    height: 75px;
+    align-items: center;
+}
+
+.about{
+    font-size: 27px;
+}
+
+.name{
+    margin-left: 15px;
+    font-family: 'Koulen', cursive;
+    letter-spacing: 7px;
+}
+
+.containerMenu {
+    cursor: pointer;
+    width: 20%;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 100px;
+    height: 6px;
+    background-color: #333;
+    margin: 10px 0;
+    transition: 0.4s;
+    margin-left: auto;
+}
+
+
+/* оверлей навигация */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.bg{
+    width: 100vw;
+    background: url('img/bg.jpg') 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover; /* Масштабируем фон */
+}
+
+/* content */
+
+.intro{
+    margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro p{
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+.intro1{
+    width: 900px;
+    height: 700px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.708);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*slider*/
+.slider{
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.imgLine{
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all 1s ease 0s;
+}
+
+.btnLeft{
+    font-size: 30px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    cursor: pointer;
+    transition: all .4s ease 0s;
+}
+.btnRight{
+    font-size: 30px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    cursor: pointer;
+    transition: all .4s ease 0s;
+}
+
+.btnLeft:hover{
+    color: rgb(135, 135, 135);
+}
+
+.btnRight:hover{
+    color: rgb(135, 135, 135);
+}
+
+/* more content */
+.content{
+    margin-top: 40px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.contentTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contentImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+}
+
+.process{
+    height: 315px;
+    width: 480px;
+}
+
+.contentTxt p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+/* footer */
+.contacts{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.contacts a:hover{
+    color: #000000;
+    transition: all .5s ease 0s;
+}
+
+.leftBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+}
+
+.leftBar a{
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.rightBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.rightBar a{
+    text-decoration: none;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.footerLogo{
+    height: 250px;
+    width: 250px;
+}
+
+
+/* изменение ширины браузера */
+@media screen and (max-width: 900px) {
+    .intro{
+        margin-top: 100px;
+        height: 175px;
+        width: 100%;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .intro p{
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+    }
+    
+    .header p{
+        color: white;
+        user-select: none;
+    }
+    .header h1{
+        z-index: 2;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .slider{
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    .imgLine{
+        height: 100%;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all 1s ease 0s;
+    }
+    .intro1{
+        width: 450px;
+        height: 350px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.708);
+        text-transform: uppercase;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .leftBar a{
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .rightBar a{
+        text-decoration: none;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .footerLogo{
+        height: 150px;
+        width: 150px;
+    }
+
+    .process{
+        height: 157px;
+        width: 240px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 350px;
+        width: 100%;
+        display: flex;
+    }
+    .contentTxt p{
+        color: white;
+        text-transform: uppercase;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .process{
+        height: 240px;
+        width: 360px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 500px;
+        width: 100%;
+        display: flex;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .process{
+        height: 120px;
+        width: 180px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 200px;
+        width: 100%;
+        display: flex;
+    }
+    .contentTxt p{
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .about{
+        color: white;
+        z-index: -1;
+    }
+}

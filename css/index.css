@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none; /*chrome*/
+  }
+/* HEADER */
+
+.header{
+    width: 100%;
+    padding: 12px 24px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);   
+    position: fixed;
+    border-bottom: 2px solid black;
+    top: 0;
+    width: 100%
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+
+.logoContainer{
+    display: flex;
+    width: 20%;
+    height: 75px;
+    align-items: center;
+}
+
+.about{
+    font-size: 27px;
+}
+
+.name{
+    margin-left: 15px;
+    font-family: 'Koulen', cursive;
+    letter-spacing: 7px;
+}
+
+.containerMenu {
+    display: inline-block;
+    cursor: pointer;
+    width: 20%;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 100px;
+    height: 6px;
+    background-color: #333;
+    margin: 10px 0;
+    transition: 0.4s;
+    margin-left: auto;
+}
+
+/* оверлей навигация */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* INTRO */
+
+
+.intro{
+    width: 100%;
+    height: 2500px;
+    background-color: black;
+    color: white;
+    margin-top: 100px;
+    text-transform: uppercase;
+}
+
+.firstIntro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textIntro{
+    display: flex;
+    margin: 50px 0 100px 0;
+}
+
+.firstIntro p{
+    font-size: 50px;
+    letter-spacing: 4px;
+}
+
+.line{
+    margin: 0 100px;
+}
+
+.firstWords{
+margin: 50px 0;
+}
+
+.secondIntro{
+    display: flex;
+    width: 50%;
+}
+
+.secondIntro p{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    word-spacing: 2px;
+}
+
+/* footer */
+.contacts{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.contacts a:hover{
+    color: #000000;
+    transition: all .5s ease 0s;
+}
+
+.leftBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+}
+
+.leftBar a{
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.rightBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.rightBar a{
+    text-decoration: none;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.footerLogo{
+    height: 250px;
+    width: 250px;
+}
+
+/* изменение ширины браузера */
+@media only screen and (max-width: 1000px) {
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .secondIntro{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about{
+        color: white;
+        z-index: -1;
+    }
+    
+    .textIntro{
+        display: flex;
+        margin: 25px 0 50px 0;
+    }
+    
+    .firstIntro p{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    
+    .line{
+        margin: 0 30px;
+    }
+    
+    .firstWords{
+    margin: 25px 0;
+    }
+    
+    .leftBar a{
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .rightBar a{
+        text-decoration: none;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .footerLogo{
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .firstIntro p{
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+}
+
+
