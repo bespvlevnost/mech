@@ -13,6 +13,7 @@ var img11 = document.getElementById('myImg11');
 var img12 = document.getElementById('myImg12');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
+
 img1.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
@@ -73,6 +74,13 @@ img12.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
+
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        modal.style.display = "none";
+    }
+    });
 
 var span = document.getElementsByClassName("close")[0];
 
