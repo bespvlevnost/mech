@@ -139,6 +139,10 @@
     transform: translateX(-50%);
 }
 /*slider*/
+.img700{
+    width: 700px;
+    height: 700px;
+}
 .slider{
     width: 700px;
     height: 700px;
@@ -278,6 +282,10 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+    }
+    .img700{
+        width: 350px;
+        height: 350px;
     }
     .imgLine{
         height: 100%;
