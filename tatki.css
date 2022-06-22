@@ -175,6 +175,11 @@
     transition: all 1s ease 0s;
 }
 
+.img700{
+    width: 700px;
+    height: 700px;
+}
+
 .btnLeft{
     font-size: 30px;
     margin: 0;
@@ -326,6 +331,10 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+    }
+    .img700{
+        width: 350px;
+        height: 350px;
     }
     .imgLine{
         height: 100%;
