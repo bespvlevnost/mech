@@ -181,10 +181,7 @@
     transition: .3s;
 }
 
-.imgBlockL:hover{
-    opacity: 0.7;
-}
-.imgBlockR:hover {
+.imgBlockL:hover, .imgBlockR:hover {
     opacity: 0.7;
 }
 
@@ -223,7 +220,7 @@
     height: 150px;
 }
 
-/* Animation */
+/* Add Animation */
 .modal-content, #caption {    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
